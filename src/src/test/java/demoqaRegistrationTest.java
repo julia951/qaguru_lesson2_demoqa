@@ -8,17 +8,17 @@ import static com.codeborne.selenide.Condition.*;
 
 public class demoqaRegistrationTest {
 
-    String firstName="Tester First Name";
-    String lastName="Tester First Name";
-    String email="tester@gmail.test";
-    String phoneNumber="1234567890";
-    String month="January";
-    String year="2000";
-    String subjectMath="Maths";
-    String address="testCity testStreet 123";
-    String state="Haryana";
-    String city="Panipat";
-    String successModalWindow="Thanks for submitting the form";
+    private final String firstName= "Tester First Name";
+    private final String lastName= "Tester First Name";
+    private final String email= "tester@gmail.test";
+    private final String phoneNumber= "1234567890";
+    private final String month= "January";
+    private final String year= "2000";
+    private final String subjectMath= "Maths";
+    private final String address= "testCity testStreet 123";
+    private final String state= "Haryana";
+    private final String city= "Panipat";
+    private final String successModalWindow= "Thanks for submitting the form";
 
     @BeforeAll
     static void setUp() {
@@ -29,7 +29,6 @@ public class demoqaRegistrationTest {
     @Test
     void positiveFillTest() {
         open("/automation-practice-form");
-        $(".practice-form-wrapper").shouldHave(text("Student Registration Form"));
 
         $("#firstName").val(firstName);
         $("#lastName").val(lastName);
