@@ -6,7 +6,7 @@ import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Condition.*;
 
 
-public class demoqaRegistrationTest {
+public class RegistrationTest {
 
     private final String firstName= "Tester First Name";
     private final String lastName= "Tester First Name";
@@ -33,7 +33,7 @@ public class demoqaRegistrationTest {
         $("#firstName").val(firstName);
         $("#lastName").val(lastName);
         $("#userEmail").val(email);
-        $("[name=gender][value=Other]").parent().click();
+        $("#genterWrapper").$(byText("Male")).click();
         $("#userNumber").val(phoneNumber);
         $("#dateOfBirthInput").click();
         $(".react-datepicker__month-select").selectOption(month);
